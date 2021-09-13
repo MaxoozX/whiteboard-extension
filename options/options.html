@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    
+      :root {
+        --emphasize: #D3D3D3;
+      }
+    
+      html, body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+      
+      body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      #root {
+        border: 2px solid black;
+        border-radius: 5%;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 2em;
+      }
+      
+      #color-picker-label {
+        padding: 0.2em;
+        display: flex;
+        flex-direction: line;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      
+      #color-picker-label:hover {
+        background-color: var(--emphasize);
+      }
+      
+      #color-picker, #size-picker {
+        margin: 0 0.5em;
+      }
+      
+      #size-picker-label {
+        padding: 0.2em;
+        display: flex;
+        flex-direction: line;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      
+      #size-picker-label:hover {
+        background-color: var(--emphasize);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <h1>Default values</h1>
+      <p><label id="color-picker-label">Default color :  <input id="color-picker" type="color" value="#ffaa00"></label></p>
+      <p><label id="size-picker-label">Default width : <input id="size-picker" type="range" min="1" max="25" value="1"><span id="size-display">1</span></label></p>
+    </div>
+  <script src="options.js"></script>
+  </body>
+</html>

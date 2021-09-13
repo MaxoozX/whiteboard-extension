@@ -1,0 +1,35 @@
+{
+  "name": "Web WhiteBoard",
+  "description": "A very simple whiteboard that you can enable to draw on any webpage.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "/images/16.png",
+      "32": "/images/32.png",
+      "24": "/images/24.png",
+      "48": "/images/48.png",
+      "128": "/images/128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/16.png",
+    "32": "/images/32.png",
+    "24": "/images/24.png",
+    "48": "/images/48.png",
+    "128": "/images/128.png"
+  },
+  "options_page": "options/options.html",
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["injected/injected.js"]
+  }],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/round-cursor.svg"],
+      "matches": ["*://*/*"]
+    }
+  ]
+}
